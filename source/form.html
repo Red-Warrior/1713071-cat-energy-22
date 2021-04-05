@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
@@ -24,7 +26,7 @@
               <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+              <span>Подбор программы</span>
             </li>
           </ul>
         </div>
@@ -47,8 +49,8 @@
             <label class="cat-profile__item">
               ВЕС(КГ)*:<input class="cat-profile__item-field" type="text" name="cat-weight" placeholder="7" required>
             </label>
-            <label class="cat__item">
-              ВОЗРАСТ(ЛЕТ)*:<input class="cat-profile__item-field" type="text" name="cat-age" placeholder="7" required>
+            <label class="cat-profile__item">
+              ВОЗРАСТ(ЛЕТ):<input class="cat-profile__item-field" type="text" name="cat-age" placeholder="7">
             </label>
           </fieldset>
 
@@ -68,9 +70,9 @@
 
         <section class="owner-form">
           <fieldset class="owner-contact">
-            <h2 class="owner-contact__heading">Контактные данные
+            <legend class="owner-contact__heading">Контактные данные
               (владельца кота)
-            </h2>
+            </legend>
             <label class="owner-contact__item">
               <input class="owner-contact__item-field" type="email" name="e-mail" placeholder="KUKLACHEV@GMAIL.COM" required>
               <img class="owner-contact__item-icon owner-contact__icon-wrapper" src="img/envelope.svg" alt="Почтовый конверт">
@@ -82,14 +84,14 @@
           </fieldset>
 
           <fieldset class="owner-comment">
-            <h2 class="owner-comment__heading">Комментарий</h2>
-            <label class="visually-hidden" for="comment"></label>
-            <textarea class="owner-comment__item-field" id="comment" name="comment" cols="30" rows="10"
+            <legend class="owner-comment__heading">Комментарий</legend>
+            <label class="visually-hidden" for="comment" aria-label="Расскажите о повадках кота"></label>
+            <textarea id="comment" name="comment" cols="30" rows="10"
                       placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
           </fieldset>
 
           <fieldset class="additionally-info">
-            <h2 class="additionally-info__heading">Дополнительно</h2>
+            <legend class="additionally-info__heading">Дополнительно</legend>
             <label class="additionally-info__item">
               <input class="additionally-info__item-field" type="checkbox" name="sweetener" checked>САХАРОЗАМЕНИТЕЛЬ
             </label>
@@ -141,9 +143,12 @@
           <a class="social__link social__link--facebook" href=""></a>
         </li>
       </ul>
+
       <div class="page-footer__bottom-info">
-        <p class="page-footer__text">HTML Academy</p>
-        <img class="page-footer__logo" src="img/logo_html.png" alt="логотип">
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="page-footer__text">HTML Academy</p>
+          <img class="page-footer__logo" src="img/logo_html.png" alt="логотип">
+        </a>
       </div>
     </footer>
   </body>
