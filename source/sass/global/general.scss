@@ -1,0 +1,10 @@
+@import "variables";
+
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+  background-color: $base-background;
+}
+
+.visually-hidden {
+  display: none;
+}

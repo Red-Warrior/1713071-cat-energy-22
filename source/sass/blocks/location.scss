@@ -1,0 +1,32 @@
+.location__info {
+  padding: 28px 19px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location__text-cooperation {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0;
+  min-width: 140px;
+}
+
+.location__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  margin: 0;
+  min-width: 140px;
+}
+
+.location__map {
+  width: 100%;
+}
+

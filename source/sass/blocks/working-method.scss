@@ -1,0 +1,48 @@
+@import "../global/variables";
+
+.working-method {
+  padding: 0 20px 42px 20px;
+}
+
+.working-method__heading {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+  margin: 0;
+  margin-right: auto;
+  padding-bottom: 38px;
+}
+
+.working-method__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.working-method__item {
+  display: flex;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.working-method__item:last-child {
+  padding-bottom: 0;
+}
+
+.working-method__icon {
+  padding: 0;
+}
+
+.working-method__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  padding: 0;
+  padding-left: 20px;
+  margin: 0;
+}

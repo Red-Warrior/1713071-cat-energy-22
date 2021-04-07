@@ -1,0 +1,67 @@
+@import "../global/variables";
+
+.promo {
+  background: url("../../img/index-background.jpg")
+    no-repeat top;
+  background-size: contain;
+  color: #ffffff;
+}
+
+.promo__heading {
+  width: 250px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0 auto 0 auto;
+  padding-top: 27px;
+  padding-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  //top: -306px;
+}
+
+.promo__text-wrapper {
+  background-color: $brand-green;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 7px 0 7px 0;
+  text-align: center;
+
+  &:hover {
+    transition: background-color 0.2s ease-in-out;
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    .promo__text-2 {
+      opacity: 0.3;
+    }
+  }
+}
+
+.promo__text-1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 29px;
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.promo__text-2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
