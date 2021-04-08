@@ -1,0 +1,43 @@
+@import "../global/variables";
+
+.page-footer {
+  background-color: $blocks;
+  padding-top: 39px;
+}
+
+.page-footer__logo-1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 32px;
+}
+
+.social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__bottom-info {
+  padding-bottom: 22px;
+}
+
+.page-footer__bottom-info a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.page-footer__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  margin: 0;
+}
+
+.page-footer__logo-2 {
+  margin: 0;
+}

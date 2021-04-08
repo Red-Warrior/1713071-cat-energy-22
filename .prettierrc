@@ -1,0 +1,15 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi":true,
+  "printWidth": 120,
+
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "printWidth": 60
+      }
+    }
+  ]
+}

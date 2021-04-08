@@ -1,0 +1,77 @@
+@import "../global/variables";
+
+.example {
+  background-color: $blocks;
+  padding: 27px 20px 25px 20px;
+}
+
+.example-heading {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+}
+
+.example__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  margin: 33px 0 25px 0;
+}
+
+.example__info {
+  display: flex;
+  justify-content: center;
+}
+
+.example__item {
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 3px;
+  flex-grow: 1;
+  min-width: 124px;
+  text-align: center;
+}
+
+.example__item:first-child {
+  margin-right: 30px;
+}
+
+.example__text-top {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 15px;
+  margin-bottom: 18px;
+}
+
+.example__total {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 34px;
+  margin-bottom: 42px;
+}
+
+.example__image {
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.example__control-block {
+  display: flex;
+  justify-content: space-around;
+}
