@@ -34,13 +34,13 @@
   }
 
   &:active {
-    .promo__text-2 {
+    .promo__get-program {
       opacity: 0.3;
     }
   }
 }
 
-.promo__text-1 {
+.promo__subtitle {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -56,7 +56,7 @@
   margin: 0 auto;
 }
 
-.promo__text-2 {
+.promo__get-program {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

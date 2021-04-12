@@ -24,11 +24,11 @@
         <img class="page-header__logo-title" src="img/logo-2-mobile.svg" width="101" height="18" alt="cat energy" />
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
-          <img class="page-header__image" src="img/base-button.svg" width="24" height="18" alt="Закрыть меню" />
+          <img class="page-header__image" src="img/close.svg" width="24" height="18" alt="Закрыть меню" />
         </button>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--show-menu">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -49,10 +49,16 @@
       <section class="promo">
         <!--        <img class="promo__background-image" src="img/index-background-desktop_2.jpg" alt="Облизывающийся кот" />-->
         <h1 class="promo__heading">Функциональное питание для котов</h1>
-        <p class="promo__text-1">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="img/index-can-mobile_1.png" alt="Питание для котов Cat energy pro курица" />
+        <p class="promo__subtitle">Занялся собой? Займись котом!</p>
+        <img
+          class="promo__image"
+          src="img/index-can-mobile_1.png"
+          alt="Питание для котов Cat energy pro курица"
+          width="280"
+          height="270"
+        />
         <div class="promo__text-wrapper">
-          <a href="form.html" class="promo__text-2">подобрать программу</a>
+          <a href="form.html" class="promo__get-program">подобрать программу</a>
         </div>
       </section>
 
@@ -63,8 +69,10 @@
               class="slimming__icon"
               src="img/cat_back_sitting.svg"
               alt="силуэт сидящей кошки, вид сбоку, на фоне круга"
+              width="50"
+              height="53"
             />
-            <h2 class="weight-change__heading weight-change__wrapper-1">Похудение</h2>
+            <h2 class="weight-change__heading weight-change__s-place">Похудение</h2>
           </div>
           <p class="weight-change__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
@@ -82,15 +90,17 @@
               class="weight-gain__icon"
               src="img/cat_back_standing.svg"
               alt="силуэт идущей кошки, вид сбоку, на фоне круга"
+              width="67"
+              height="50"
             />
-            <h2 class="weight-change__heading weight-change__wrapper-2">Набор массы</h2>
+            <h2 class="weight-change__heading weight-change__g-place">Набор массы</h2>
           </div>
-          <p class="weight-change__text">
+          <p class="weight-change__text weight-gain-indent">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!
           </p>
           <a href="catalog.html" class="catalog">
-            <span class="catalog__text">Каталог pro</span>
+            <span class="catalog__text weight-gain-indent">Каталог pro</span>
             <img class="catalog__arrow-icon" src="img/arrow.svg" alt="стрелка - переход в каталог slim" />
           </a>
         </div>
@@ -100,7 +110,7 @@
         <h2 class="working-method__heading">Как это работает</h2>
         <ul class="working-method__list">
           <li class="working-method__item">
-            <img class="working-method__icon" src="img/leaf.svg" alt="древесный листок" />
+            <img class="working-method__icon" src="img/leaf.svg" alt="древесный листок" width="60" height="60" />
             <p class="working-method__text">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
           <li class="working-method__item">
@@ -108,15 +118,17 @@
               class="working-method__icon"
               src="img/powder.svg"
               alt="прозрачная ёмкость с порошком залитым кипятком"
+              width="60"
+              height="60"
             />
             <p class="working-method__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
           <li class="working-method__item">
-            <img class="working-method__icon" src="img/tableware.svg" alt="вилка, нож" />
+            <img class="working-method__icon" src="img/tableware.svg" alt="вилка, нож" width="60" height="60" />
             <p class="working-method__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="working-method__item">
-            <img class="working-method__icon" src="img/watch.svg" alt="часы настольные" />
+            <img class="working-method__icon" src="img/watch.svg" alt="часы настольные" width="60" height="60" />
             <p class="working-method__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ul>
@@ -133,18 +145,24 @@
           <div class="example__item">
             <p class="example__text-top">5 КГ</p>
           </div>
-<!--          <p class="example__text-bottom">снижение веса</p>-->
+          <!--          <p class="example__text-bottom">снижение веса</p>-->
           <div class="example__item">
             <p class="example__text-top">60 ДНЕЙ</p>
           </div>
-<!--          <p class="example__text-bottom">затрачено времени</p>-->
+          <!--          <p class="example__text-bottom">затрачено времени</p>-->
         </div>
         <p class="example__total">Затраты на питание: 15 000 РУБ.</p>
 
         <div class="example__slider">
           <div class="example__image">
-            <img class="example__image-before" src="img/before-mobile.png" alt="кот до похудения" />
-<!--            <img class="example__image-after" src="img/after-mobile.png" alt="кот после похудения" />-->
+            <img
+              class="example__image-before"
+              src="img/before-mobile.png"
+              alt="кот до похудения"
+              width="311"
+              height="232"
+            />
+            <!--            <img class="example__image-after" src="img/after-mobile.png" alt="кот после похудения" />-->
           </div>
 
           <div class="example__control-block">

@@ -6,29 +6,29 @@
 }
 
 .example-heading {
+  padding: 0;
+  margin: 0 auto 0 0;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
   color: #000000;
-  padding: 0;
-  margin: 0;
-  margin-right: auto;
 }
 
 .example__text {
+  margin: 33px 0 25px 0;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  margin: 33px 0 25px 0;
 }
 
 .example__info {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .example__item {
@@ -45,16 +45,18 @@
 }
 
 .example__text-top {
+  margin-top: 15px;
+  margin-bottom: 18px;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   color: #000000;
-  margin-top: 15px;
-  margin-bottom: 18px;
 }
 
 .example__total {
+  margin-top: 34px;
+  margin-bottom: 42px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -62,8 +64,6 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  margin-top: 34px;
-  margin-bottom: 42px;
 }
 
 .example__image {
