@@ -1,7 +1,8 @@
 @import "../global/variables";
 
 .working-method {
-  padding: 0 20px 42px 20px;
+  @include side-padding;
+  padding-bottom: 42px;
 }
 
 .working-method__heading {

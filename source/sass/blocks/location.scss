@@ -1,11 +1,18 @@
+@import "../global/variables";
+
 .location__info {
-  padding: 28px 19px;
+  @include side-padding;
+  padding-top: 28px;
+  padding-bottom: 28px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: $base-background;
 }
 
 .location__text-cooperation {
   margin: 0;
+  padding-right: 5px;
   min-width: 140px;
   font-style: normal;
   font-weight: normal;

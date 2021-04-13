@@ -8,6 +8,7 @@
   padding-top: 12px;
   padding-left: 21px;
   float: left;
+  align-items: center;
 }
 
 .page-header__logo-title {
@@ -15,27 +16,43 @@
   padding-bottom: 24px;
 }
 
-.page-header__image {
-  width: 24px;
-  height: auto;
-}
-
-.main-nav {
-  overflow: hidden;
-  max-height: 0;
-  //transition: max-height 0.5s ease-in-out;
-}
-
-.main-nav--show-menu {
-  max-height: 210px;
-}
-
 .page-header__toggle {
-  align-self: center;
-  padding-right: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 21px 0 0;
+  width: 45px;
+  height: auto;
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.page-header__image {
+  width: 18px;
+  height: 18px;
+  background: url("../../img/close.svg") center no-repeat;
+  background-size: contain;
+}
+
+.page-header--menu-icon {
+  width: 24px;
+  height: 16px;
+  background: url("../../img/base-button.svg") center
+    no-repeat;
+  background-size: contain;
+}
+
+.main-nav {
+  display: block;
+}
+
+.main-nav--close-menu {
+  display: none;
+}
+
+.page-header--hidden {
+  visibility: hidden;
 }
 
 .site-list {
