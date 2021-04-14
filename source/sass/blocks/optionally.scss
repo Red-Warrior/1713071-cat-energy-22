@@ -1,0 +1,58 @@
+@import "../global/variables";
+
+.optionally {
+  @include side-padding;
+}
+
+.optionally__heading {
+  margin: 0;
+  padding: 25px 0 36px 0;
+  text-align: left;
+  vertical-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.optionally__item {
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.optionally__wrapper {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.optionally__item h2 {
+  margin: 13px 0;
+  text-align: left;
+  vertical-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.optionally__gift {
+  padding-top: 39px;
+  height: auto;
+}
+
+.optionally__gift img {
+  width: 100%;
+  height: auto;
+}

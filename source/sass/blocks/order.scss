@@ -1,0 +1,26 @@
+@import "../global/variables";
+
+.order {
+  padding: 10px 0;
+  background-color: $brand-green;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+}
+
+.order__text {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.order--all {
+  background-color: $blocks;
+}
+
+.order__text--all {
+  color: #444444;
+}

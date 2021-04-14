@@ -1,7 +1,9 @@
 @import "../global/variables";
 
 .weight-change {
-  padding: 22px 20px 27px 20px;
+  @include side-padding;
+  padding-top: 22px;
+  padding-bottom: 27px;
 }
 
 .weight-change__heading {
@@ -27,7 +29,7 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
-.catalog {
+.weight-change__catalog {
   margin-top: 15px;
   display: block;
   text-decoration: none;

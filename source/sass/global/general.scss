@@ -3,6 +3,7 @@
 body {
   font-family: "Oswald", "Arial", sans-serif;
   background-color: $base-background;
+  min-width: 320px;
 }
 
 .visually-hidden {
