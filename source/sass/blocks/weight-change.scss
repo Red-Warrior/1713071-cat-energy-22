@@ -1,12 +1,72 @@
 @import "../global/variables";
 
-.weight-change {
+.weight {
   @include side-padding;
   padding-top: 22px;
   padding-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    @include side-margin(3.9%);
+    padding: 0;
+  }
 }
 
-.weight-change__heading {
+.weight__wrapper {
+  background-color: $blocks;
+  padding: 20px 33px 18px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 1px 52px;
+  }
+}
+
+.weight__wrapper:last-child {
+  margin-top: 20px;
+  padding: 24px 33px 18px 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 1px 52px;
+  }
+}
+
+.weight__wrapper a {
+  display: flex;
+  align-items: center;
+}
+
+.weight__heading {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.weight__slimming-icon,
+.weight__gain-icon {
+  float: right;
+}
+
+.weight__slimming-icon {
+  @media (min-width: $tablet-width) {
+    margin-right: 62px;
+    margin-top: 81px;
+    width: 200px;
+    height: 211px;
+  }
+}
+
+.weight__gain-icon {
+  @media (min-width: $tablet-width) {
+    margin-right: 28px;
+    margin-top: 91px;
+    width: 268px;
+    height: 200px;
+  }
+}
+
+.weight__title {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -14,9 +74,15 @@
   text-transform: uppercase;
   color: #000000;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 77px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
-.weight-change__text {
+.weight__text {
   margin: 0;
   padding-top: 22px;
   padding-bottom: 23px;
@@ -27,11 +93,30 @@
   line-height: 18px;
   color: #444444;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    border: none;
+  }
 }
 
-.weight-change__catalog {
+.weight__text-indent {
+  margin-left: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.weight__catalog {
   margin-top: 15px;
   display: block;
+  width: 132px;
+  height: 24px;
   text-decoration: none;
 
   &:hover {
@@ -45,9 +130,16 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 53px;
+    width: 165px;
+    height: 38px;
+  }
 }
 
-.catalog__text {
+.weight__desc {
   padding-right: 15px;
   font-style: normal;
   font-weight: normal;
@@ -55,51 +147,31 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
-.catalog__arrow-icon {
+.weight__arrow-icon {
   width: 24px;
   height: 12px;
 }
 
-.slimming a,
-.weight-gain a {
-  display: flex;
-  align-items: center;
-}
-
-.slimming,
-.weight-gain {
-  background-color: $blocks;
-}
-
-.slimming {
-  padding: 20px 33px 18px 20px;
-}
-
-.slimming__heading {
-  display: flex;
-  align-items: center;
-}
-
-.weight-change__s-place {
+.weight__slim-indent {
   padding-left: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
 }
 
-.weight-change__g-place {
+.weight__gain-indent {
   padding-left: 11px;
-}
 
-.weight-gain {
-  margin-top: 20px;
-  padding: 24px 33px 18px 13px;
-}
-
-.weight-gain__heading {
-  display: flex;
-  align-items: center;
-}
-
-.weight-gain-indent {
-  margin-left: 7px;
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
 }

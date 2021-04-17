@@ -1,22 +1,36 @@
 @import "../global/variables";
 
 .example {
+  @include side-padding;
   background-color: $blocks;
-  padding: 27px 0 25px 0;
+  padding-top: 27px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    @include side-padding(3.9%);
+    padding-top: 0;
+    padding-bottom: 0;
+    background: $base-background
+      url("../../img/example-bg-t.jpg") repeat-x bottom;
+  }
 }
 
 .example-heading {
-  @include side-padding;
   margin: 0 auto 0 0;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__text {
-  @include side-padding;
   margin: 33px 0 25px 0;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -24,12 +38,76 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 63px 0 54px 0;
+  }
+}
+
+.example__info {
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    margin-bottom: 59px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.example__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: left;
+  }
 }
 
 .example__info-wrapper {
   flex-grow: 1;
   min-width: 124px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 0;
+    width: 162px;
+    align-items: center;
+  }
+}
+
+.example__info-wrapper:first-child {
+  margin-right: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 42px;
+  }
+}
+
+.example__item {
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.example__text-top {
+  margin-top: 15px;
+  margin-bottom: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__text-bottom {
@@ -41,35 +119,16 @@
   line-height: 12px;
   color: #444444;
   background-color: $blocks;
+  z-index: 2;
   position: relative;
-  top: -10px;
-}
+  top: -9px;
 
-.example__info {
-  @include side-padding;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.example__item {
-  border: 1px solid #cdcdcd;
-  box-sizing: border-box;
-  border-radius: 3px;
-}
-
-.example__info-wrapper:first-child {
-  margin-right: 30px;
-}
-
-.example__text-top {
-  margin-top: 15px;
-  margin-bottom: 18px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
+  @media (min-width: $tablet-width) {
+    width: 70%;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $base-background;
+  }
 }
 
 .example__total {
@@ -82,27 +141,146 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    margin: 0;
+  }
+}
+
+.example__total br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.example__slider {
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+  }
 }
 
 .example__image {
-  text-align: center;
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 708px;
+    height: 620px;
+  }
 }
 
 .example__image img {
   width: 100%;
   height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: 520px;
+  }
+}
+
+.example__image-before {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    clip-path: inset(0 50% 0 0);
+  }
+}
+
+.example__image-after {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0 auto;
+    object-position: 25px;
+    clip-path: inset(0 0 0 50%);
+  }
 }
 
 .example__control-block {
-  margin: 13px 46px 0 46px;
+  margin: 13px 27px 0 27px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -37px;
+    position: relative;
+    top: -100px;
+    justify-content: center;
+  }
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 0;
+  }
+}
+
+.example__control {
+  min-width: 84px;
+  min-height: 14px;
+  background-color: $base-background;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 428px;
+    min-height: 6px;
+    background-color: #dcdcdc;
+    border: none;
+  }
+}
+
+.example__toggle {
+  margin: 0 6px -8px 6px;
+  position: relative;
+  top: -11px;
+  align-self: center;
+  width: 45%;
+  min-height: 6px;
+  border-radius: 6px;
+  background-color: $brand-green;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 -37px 0;
+    width: 34px;
+    height: 34px;
+    top: -20px;
+    border-radius: 50%;
+    background-color: $base-background;
+    border: 1px solid #cdcdcd;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example__toggle::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 13px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $brand-green;
+  }
 }
 
 .example__control-block button {
   padding: 0;
-  margin: 0 2px;
+  margin: 0 14px;
   width: 70px;
   height: 40px;
   border: none;
@@ -114,23 +292,17 @@
   text-transform: uppercase;
   color: #000000;
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
-.example__control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  min-width: 84px;
-  min-height: 14px;
-  background-color: $base-background;
-  border-radius: 6px;
-}
-
-.example__toggle {
-  margin: 0 6px;
-  background-color: $brand-green;
-  width: 45%;
-  min-height: 6px;
-  border-radius: 6px;
+.example__control-block span {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 1px dotted rgba(#000000, 0.24);
+  }
 }

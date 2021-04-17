@@ -1,11 +1,12 @@
 @import "../global/variables";
 
-.example__text-bottom {
-  z-index: 2;
-}
-
 .promo {
   color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    @include side-margin(3.9%);
+    color: #000000;
+  }
 }
 
 .promo__wrapper {
@@ -17,22 +18,64 @@
   left: 0;
   right: 0;
   z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .promo__heading {
-  width: 250px;
+  max-width: 250px;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   margin: 0 auto 0 auto;
-  padding-top: 27px;
-  padding-bottom: 25px;
+  padding-top: 64px;
+  padding-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 90px;
+    max-width: 420px;
+    font-size: 60px;
+    line-height: 60px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.promo__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 90px;
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    width: 709px;
+    height: 609px;
+  }
 }
 
 .promo__text-wrapper {
   @include side-margin;
-  padding: 7px 0 7px 0;
+  padding: 7px 0;
   background-color: $brand-green;
   text-align: center;
 
@@ -46,22 +89,16 @@
       opacity: 0.3;
     }
   }
-}
 
-.promo__subtitle {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  padding-bottom: 29px;
-}
-
-.promo__image {
-  display: block;
-  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-left: 90px;
+    margin-top: 50px;
+    padding: 14px 0;
+    width: 244px;
+    position: absolute;
+    top: 311px;
+  }
 }
 
 .promo__get-program {
@@ -72,4 +109,9 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
