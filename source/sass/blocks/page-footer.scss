@@ -1,7 +1,9 @@
 @import "../global/variables";
 
 .page-footer {
-  padding: 39px 20px 22px 20px;
+  @include side-padding;
+  padding-top: 39px;
+  padding-bottom: 22px;
   background-color: $blocks;
 
   @media (min-width: $tablet-width) {

@@ -75,19 +75,6 @@
   }
 }
 
-/*
-@media (min-width: $tablet-width) {
-  @for $i from 1 through 4 {
-    .working-method__item:nth-child(#{$i}) {
-      background: url("../../img/icon-#{$i}-t.png")
-        no-repeat
-        127px
-        40px;
-    }
-  }
-}
-*/
-
 .working-method__icon {
   padding: 0;
 

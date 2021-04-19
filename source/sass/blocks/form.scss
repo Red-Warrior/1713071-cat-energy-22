@@ -1,0 +1,353 @@
+@import "../global/variables";
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.form {
+  @include side-padding;
+
+  @media (min-width: $tablet-width) {
+    @include side-padding(3.9%);
+    margin: 0 40px;
+  }
+}
+
+.page--form::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 157px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  position: absolute;
+  top: 455px;
+  pointer-events: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.form__heading {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 64px;
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.form__text {
+  margin-top: 0;
+  margin-bottom: 39px;
+  max-width: 230px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    max-width: 330px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__label {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__label:last-child {
+  margin-bottom: 0;
+}
+
+.form-weight .form__label {
+  color: #222222;
+}
+
+.form-additionally .form__label {
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+.form-additionally .form__label:last-of-type {
+  margin-right: 40px;
+}
+
+.form__field {
+  flex-grow: 1;
+  margin-left: 13px;
+  border-radius: 0;
+  border: 1px solid #e7e7e7;
+  height: 46px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 10px;
+  }
+}
+
+.form-weight input,
+.form-additionally input {
+  display: none;
+}
+
+.form-weight label::before,
+.form-additionally label::before {
+  content: "";
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-additionally label::before {
+  border-radius: 0;
+}
+
+.form-weight input:checked + label::before {
+  background-color: $brand-green;
+  box-shadow: inset 0 0 0 8px $base-background;
+
+  @media (min-width: $tablet-width) {
+    box-shadow: inset 0 0 0 11px $base-background;
+  }
+}
+
+.form-additionally input:checked + label::before {
+  background: url("../../img/tick.svg") no-repeat center;
+}
+
+.form-additionally input {
+  margin-right: 16px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+  padding-left: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+.form-comment textarea {
+  &:focus {
+    outline: 2px solid #444444;
+  }
+}
+
+input[type="text"]:invalid {
+  outline-color: #ff8282;
+}
+
+.form-comment textarea {
+  width: 100%;
+  height: 150px;
+  border-radius: 0;
+  border: 1px solid #e7e7e7;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+  }
+}
+
+.form__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__title--cont-uniq {
+  margin-bottom: 35px;
+  max-width: 190px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+    max-width: 520px;
+  }
+}
+
+.form__title--com-uniq {
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.form__title--add-uniq {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.form-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-weight {
+  margin-top: 24px;
+  margin-bottom: 26px;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  /* border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;*/
+
+  @media (min-width: $tablet-width) {
+    margin-top: 72px;
+    margin-bottom: 71px;
+    padding: 25px 28px;
+    border: 1px solid #d9d9d9;
+  }
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-contact .form__label .form__field {
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+.form-contact .form__label:first-of-type .form__field {
+  background-image: url("../../img/envelope.svg");
+}
+
+.form-contact .form__label:last-of-type .form__field {
+  background-image: url("../../img/phone.svg");
+}
+
+.form-comment {
+  margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+}
+
+.form-additionally {
+  margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 105px;
+    row-gap: 32px;
+    flex-wrap: wrap;
+  }
+}
+
+.form__submit {
+  margin-top: 34px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+    margin-bottom: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 830px;
+  }
+}
+
+.form__button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background-color: $brand-green;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    max-width: 568px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form__desc {
+  margin-top: 21px;
+  margin-bottom: 32px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 10px 0 156px;
+    min-width: 180px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

@@ -66,18 +66,18 @@
   }
 }
 
-/*.page-header__image {
+.page-header__image {
   width: 18px;
   height: 18px;
-  background: url("../../img/close.svg") center no-repeat;
+  background: url("../../img/base-button.svg") center
+    no-repeat;
   background-size: contain;
-}*/
+}
 
 .page-header--menu-icon {
   width: 24px;
   height: 16px;
-  background: url("../../img/base-button.svg") center
-    no-repeat;
+  background: url("../../img/close.svg") center no-repeat;
   background-size: contain;
 }
 
