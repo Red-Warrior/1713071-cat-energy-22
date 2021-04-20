@@ -114,6 +114,7 @@
 
 .weight__line-sep {
   display: none;
+
   @media (min-width: $tablet-width) {
     display: block;
   }
