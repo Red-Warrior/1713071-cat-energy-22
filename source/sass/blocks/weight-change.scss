@@ -112,6 +112,13 @@
   }
 }
 
+.weight__line-sep {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .weight__catalog {
   margin-top: 15px;
   display: block;
