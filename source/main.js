@@ -5,6 +5,7 @@ let menuImage = document.querySelector(".page-header__image");
 
 if (menuButton.classList.contains("page-header--hidden")) {
   menuButton.classList.remove("page-header--hidden");
+  menuMain.classList.add("main-nav--close-menu");
 }
 
 menuButton.addEventListener("click", showMenu);

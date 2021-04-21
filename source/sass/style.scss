@@ -1,18 +1,20 @@
 // Global
+@import "global/reset";
 @import "global/general";
 @import "global/variables";
 @import "global/fonts";
 
 // Blocks
-@import "blocks/page-header.scss";
+@import "blocks/page";
+@import "blocks/page-header";
+@import "blocks/main-nav";
 @import "blocks/promo";
 @import "blocks/weight-change";
 @import "blocks/working-method";
 @import "blocks/example";
 @import "blocks/location";
 @import "blocks/page-footer";
-@import "blocks/cat-form";
-@import "blocks/social";
+@import "blocks/form";
 @import "blocks/catalog";
 @import "blocks/order";
 @import "blocks/optionally";

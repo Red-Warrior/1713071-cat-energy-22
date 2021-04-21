@@ -3,6 +3,12 @@
 .working-method {
   @include side-padding;
   padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    @include side-margin(3.9%);
+    padding: 0 0 47px 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
 }
 
 .working-method__heading {
@@ -13,26 +19,71 @@
   font-size: 36px;
   line-height: 40px;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .working-method__list {
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
 }
 
 .working-method__item {
   display: flex;
-  padding: 0;
-  padding-bottom: 20px;
+  padding: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+    flex-direction: column;
+    width: 250px;
+    height: 280px;
+  }
 }
 
-.working-method__item:last-child {
-  padding-bottom: 0;
+@media (min-width: $tablet-width) {
+  .working-method__item:nth-child(1) {
+    background: url("../../img/icon-1-t.png") no-repeat
+      127px 40px;
+  }
+
+  .working-method__item:nth-child(2) {
+    background: url("../../img/icon-2-t.png") no-repeat
+      127px 40px;
+  }
+
+  .working-method__item:nth-child(3) {
+    background: url("../../img/icon-3-t.png") no-repeat
+      127px 40px;
+  }
+
+  .working-method__item:nth-child(4) {
+    background: url("../../img/icon-4-t.png") no-repeat
+      127px 40px;
+  }
 }
 
 .working-method__icon {
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 31px;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .working-method__text {
@@ -44,4 +95,10 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

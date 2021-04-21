@@ -1,8 +1,20 @@
 @import "../global/variables";
 
 .page-footer {
-  padding: 39px 20px 22px 20px;
+  @include side-padding;
+  padding-top: 39px;
+  padding-bottom: 22px;
   background-color: $blocks;
+
+  @media (min-width: $tablet-width) {
+    @include side-padding(3.9%);
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-footer__logo-1 {
@@ -10,13 +22,31 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.page-footer__bottom-info a {
-  text-decoration: none;
+.page-footer__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  list-style: none;
+  margin: 0 0 22px 0;
+  padding: 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  color: #5eaa2f;
+  height: 63px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    border: none;
+    margin: 0;
+    width: 129px;
+  }
 }
 
 .page-footer__text {
@@ -27,4 +57,46 @@
   font-size: 16px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.page-footer__link--vkontakte svg {
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.page-footer__link--instagram {
+  margin: 0 36px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.page-footer__link--instagram svg {
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.page-footer__link--facebook svg {
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 33px;
+  }
+}
+
+.page-footer__bottom-info a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

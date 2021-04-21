@@ -8,31 +8,64 @@
   justify-content: space-between;
   align-items: center;
   background-color: $base-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 66px 72px 51px 72px;
+  }
+}
+
+.location__info--color {
+  background-color: $blocks;
 }
 
 .location__text-cooperation {
   margin: 0;
   padding-right: 5px;
-  min-width: 140px;
+  max-width: 140px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: #111111;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .location__text {
   margin: 0;
-  min-width: 140px;
+  max-width: 140px;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    max-width: 160px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.location_indent {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .location__map {
   width: 100%;
+  max-height: 362px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    max-height: 400px;
+  }
 }
