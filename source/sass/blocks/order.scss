@@ -10,6 +10,12 @@
   text-transform: uppercase;
   text-align: center;
   vertical-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
 }
 
 .order__text {
