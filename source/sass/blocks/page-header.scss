@@ -8,6 +8,11 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    @include side-padding(7.64%);
+    padding-top: 53px;
+  }
 }
 
 .page-header__wrapper {
@@ -39,6 +44,11 @@
   @media (min-width: $tablet-width) {
     display: block;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 60px;
+  }
 }
 
 .page-header__logo-title {
@@ -47,6 +57,12 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 0 0 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 14px;
+    width: 118px;
+    height: 21px;
   }
 }
 
