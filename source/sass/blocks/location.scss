@@ -16,14 +16,13 @@
   background-color: $base-background;
 
   @media (min-width: $tablet-width) {
-    padding: 66px 72px 51px 72px;
+    height: 200px;
+    padding: 0 72px;
   }
 
   @media (min-width: $desktop-width) {
     margin: auto 0 auto 110px;
-    justify-content: center;
     width: 570px;
-    height: 200px;
     padding: 0;
     position: absolute;
     top: 0;
@@ -48,7 +47,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 22px;
   }
 
   @media (min-width: $desktop-width) {
