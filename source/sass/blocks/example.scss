@@ -224,7 +224,14 @@
   }
 }
 
+//--------------------
+
 .example__slider {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     padding-top: 25px;
@@ -239,82 +246,80 @@
 }
 
 .example__image-wrapper {
-  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //border: 1px solid black;
+  overflow: hidden;
+}
+
+.example__slide {
+  min-width: 280px;
+  min-height: 242px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  //border: 1px solid red;
 
   @media (min-width: $tablet-width) {
-    width: 708px;
-    height: 620px;
+    position: absolute;
   }
 }
 
 .example__image {
-  @media (min-width: $tablet-width) {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+  display: block;
+  width: 112%;
+  height: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: -16px;
+  right: 0;
 
-  @media (min-width: $desktop-width) {
-    right: -6%;
-  }
-}
-
-.example__image div:first-child {
   @media (min-width: $tablet-width) {
+    margin: 0 auto;
     position: absolute;
-    overflow: hidden;
-    clip-path: inset(0 45% 0 0);
-  }
-}
-
-.example__image div:last-child {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    overflow: hidden;
-    clip-path: inset(0 0 0 47%);
-    right: 7%;
-  }
-}
-
-.example__image div:first-child picture {
-  @media (min-width: $tablet-width) {
-    display: block;
     width: 677px;
-    height: 520px;
-  }
-}
-
-.example__image div:last-child picture {
-  @media (min-width: $tablet-width) {
-    display: block;
-    width: 545px;
-    height: 520px;
+    left: 0;
   }
 }
 
 .example__image-before {
   @media (min-width: $tablet-width) {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: auto;
+    width: 677px;
+    left: -15px;
   }
 }
 
 .example__image-after {
+  @media (min-width: $tablet-width) {
+    width: 545px;
+    left: 30px;
+  }
+}
+
+.example__after {
   display: none;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: block;
     position: absolute;
-    width: 100%;
-    height: auto;
   }
 }
 
+.example__before {
+  z-index: 1;
+  right: 50%;
+}
+
+//--------------------
+
 .example__control-block {
-  margin: 13px 27px 0 27px;
+  margin: 13px 25px 0 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -332,6 +337,66 @@
     justify-content: flex-end;
   }
 }
+
+.example__button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: transparent;
+  width: 70px;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.example__button-before {
+  margin-right: 2px;
+
+  /*&:focus {
+    .example__after {
+      display: block;
+    }
+
+    .example__before {
+      display: none;
+    }
+  }*/
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.example__button-after {
+  margin-left: 2px;
+
+  /*&:focus {
+    .example__after {
+      display: none;
+    }
+
+    .example__before {
+      display: block;
+    }
+  }*/
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+}
+
+/*.example__button span {
+
+}*/
 
 .example__wrapper {
   display: flex;
@@ -362,7 +427,7 @@
   margin: 0 6px -8px 6px;
   position: relative;
   top: -11px;
-  align-self: center;
+  align-self: flex-start;
   width: 45%;
   min-height: 6px;
   border-radius: 6px;
@@ -370,6 +435,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 0 -37px 0;
+    align-self: center;
     width: 34px;
     height: 34px;
     top: -20px;
@@ -391,40 +457,6 @@
     height: 8px;
     border-radius: 50%;
     background-color: $brand-green;
-  }
-}
-
-.example__switcher-before,
-.example__switcher-after {
-  padding: 0;
-  margin: 0 14px;
-  width: 70px;
-  height: 40px;
-  border: none;
-  outline: none;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #000000;
-  background-color: transparent;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-.example__switcher-before {
-  @media (min-width: $desktop-width) {
-    margin-left: 0;
-  }
-}
-
-.example__switcher-after {
-  @media (min-width: $desktop-width) {
-    margin-right: 0;
   }
 }
 

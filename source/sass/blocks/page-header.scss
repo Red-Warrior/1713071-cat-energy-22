@@ -16,11 +16,15 @@
 }
 
 .page-header__wrapper {
+  padding-top: 11px;
+  padding-bottom: 17px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     justify-content: flex-start;
     align-items: center;
     border: none;
@@ -28,13 +32,35 @@
 }
 
 .page-header__logo-image {
-  padding-top: 12px;
   padding-left: 21px;
   float: left;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.page-header__wrapper a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 2;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.page-header__wrapper a:nth-child(2) {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
@@ -52,9 +78,6 @@
 }
 
 .page-header__logo-title {
-  padding-top: 24px;
-  padding-bottom: 24px;
-
   @media (min-width: $tablet-width) {
     padding: 0 0 0 13px;
   }
@@ -68,7 +91,7 @@
 
 .page-header__toggle {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 21px 0 0;
   width: 45px;
@@ -82,18 +105,21 @@
   }
 }
 
+.page-header__toggle-center {
+  flex-grow: 2;
+}
+
 .page-header__image {
   width: 18px;
   height: 18px;
-  background: url("../../img/base-button.svg") center
-    no-repeat;
+  background: url("../img/base-button.svg") center no-repeat;
   background-size: contain;
 }
 
 .page-header--menu-icon {
   width: 24px;
   height: 16px;
-  background: url("../../img/close.svg") center no-repeat;
+  background: url("../img/close.svg") center no-repeat;
   background-size: contain;
 }
 
