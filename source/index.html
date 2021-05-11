@@ -20,7 +20,6 @@
           <button class="page-header__toggle page-header--hidden" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="page-header__image"></span>
-            <!--          <img class="page-header__image" src="img/close.svg" width="24" height="18" alt="Закрыть меню" />-->
           </button>
         </div>
 
@@ -40,6 +39,7 @@
           </div>
         </nav>
       </header>
+
       <main class="page">
         <section class="promo">
           <div class="promo__wrapper">
@@ -85,8 +85,8 @@
               <h2 class="weight__title weight__slim-indent">Похудение</h2>
             </div>
             <p class="weight__text">
-              Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
-              поможет вашему питомцу сбросить лишний вес.
+              Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету!
+              Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a href="catalog.html" class="weight__catalog">
               <span class="weight__desc">Каталог slim</span>
@@ -107,7 +107,7 @@
             </div>
             <p class="weight__text weight__text-indent">
               Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту
-              нарастить необходимые <br class="weight__line-sep" />мышцы!
+              нарастить необходимые<br class="weight__line-sep" />мышцы!
             </p>
             <a href="catalog.html" class="weight__catalog">
               <span class="weight__desc weight__text-indent">Каталог pro</span>
@@ -176,41 +176,36 @@
 
           <div class="example__slider">
             <div class="example__image-wrapper">
-              <div class="example__image">
-                <div>
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="img/before.png" />
-                    <img
-                      class="example__image-before"
-                      src="img/before-m.png"
-                      alt="кот до похудения"
-                      width="320"
-                      height="242"
-                    />
-                  </picture>
-                </div>
-                <div>
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="img/after.png" />
-                    <img
-                      class="example__image-after"
-                      src="img/after-m.png"
-                      alt="кот после похудения"
-                      width="320"
-                      height="242"
-                    />
-                  </picture>
-                </div>
-              </div>
+              <picture class="example__slide example__before">
+                <source media="(min-width: 768px)" srcset="../img/before.png" />
+                <img
+                  class="example__image example__image-before"
+                  src="../img/before-m.png"
+                  alt="кот до похудения"
+                  width="320"
+                  height="242"
+                />
+              </picture>
+
+              <picture class="example__slide example__after">
+                <source media="(min-width: 768px)" srcset="../img/after.png" />
+                <img
+                  class="example__image example__image-after"
+                  src="../img/after-m.png"
+                  alt="кот после похудения"
+                  width="320"
+                  height="242"
+                />
+              </picture>
             </div>
 
             <div class="example__control-block">
-              <button class="example__switcher-before" type="button"><span>было</span></button>
+              <button class="example__button example__button-before" type="button"><span>было</span></button>
               <div class="example__wrapper">
                 <div class="example__control"></div>
                 <div class="example__toggle"></div>
               </div>
-              <button class="example__switcher-after" type="button"><span>стало</span></button>
+              <button class="example__button example__button-after" type="button"><span>стало</span></button>
             </div>
           </div>
         </section>
@@ -224,7 +219,13 @@
               Санкт-Петербург
             </p>
           </div>
-          <img class="location__map" src="img/location.jpg" alt="карта" />
+          <!--          <img class="location__map" src="img/location.jpg" alt="карта" />-->
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b943dea7135a9e03483dd01850bfb8ce17a377186de723f567ed089e55c0f67&amp;source=constructor"
+            width="100%"
+            height="362"
+            frameborder="0"
+          ></iframe>
         </section>
       </main>
 
@@ -273,7 +274,7 @@
           </a>
         </div>
       </footer>
-      <script src="main.js"></script>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>

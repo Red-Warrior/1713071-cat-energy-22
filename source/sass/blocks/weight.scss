@@ -24,10 +24,12 @@
   padding: 20px 33px 18px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 1px 52px;
+    padding: 0 280px 1px 52px;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
+    position: static;
     padding-right: 52px;
     box-sizing: border-box;
     max-width: 570px;
@@ -39,14 +41,14 @@
   padding: 24px 33px 18px 13px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 1px 52px;
     margin-top: 30px;
+    padding: 0 300px 1px 52px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     padding-left: 33px;
     padding-right: 52px;
-    margin-top: 0;
     margin-left: 80px;
     flex-grow: 3;
   }
@@ -84,24 +86,26 @@
 .weight__slimming-icon,
 .weight__gain-icon {
   @media (min-width: $tablet-width) {
-    float: right;
+    margin: auto 0 auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
   }
 
   @media (min-width: $desktop-width) {
-    float: none;
+    position: static;
   }
 }
 
 .weight__slimming-icon {
   @media (min-width: $tablet-width) {
     margin-right: 62px;
-    margin-top: 81px;
     width: 200px;
     height: 211px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
     width: 100px;
     height: 106px;
   }
@@ -110,13 +114,11 @@
 .weight__gain-icon {
   @media (min-width: $tablet-width) {
     margin-right: 28px;
-    margin-top: 91px;
     width: 268px;
     height: 200px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
     margin-right: 47px;
     width: 134px;
     height: 100px;
@@ -158,6 +160,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 24px;
     padding-bottom: 48px;
+    //padding-right: 280px;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -165,8 +168,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 39px;
-    padding-bottom: 23px;
+    padding: 39px 0 23px 0;
   }
 }
 
@@ -202,14 +204,13 @@
   text-decoration: none;
 
   &:hover {
-    .catalog__arrow-icon {
+    .weight__arrow-icon {
       width: 32px;
-      height: 10px;
       transition: width 0.2s ease-in-out;
     }
   }
 
-  &:active {
+  &:focus {
     opacity: 0.3;
   }
 
@@ -226,6 +227,11 @@
   }
 }
 
+.weight__arrow-icon {
+  width: 24px;
+  height: 12px;
+}
+
 .weight__desc {
   padding-right: 15px;
   font-style: normal;
@@ -240,11 +246,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
-
-.weight__arrow-icon {
-  width: 24px;
-  height: 12px;
 }
 
 .weight__slim-indent {

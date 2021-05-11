@@ -5,7 +5,7 @@
   padding-bottom: 42px;
 
   @media (min-width: $tablet-width) {
-    @include side-margin(3.9%);
+    margin: 0;
     padding: 0 0 47px 0;
     border-bottom: 1px solid #e6e6e6;
   }
@@ -27,6 +27,7 @@
   color: #000000;
 
   @media (min-width: $tablet-width) {
+    @include side-margin(3.9%);
     padding-top: 45px;
     padding-bottom: 32px;
     font-size: 60px;
@@ -34,6 +35,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     padding-top: 71px;
   }
 }
@@ -44,6 +46,7 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    @include side-margin(3.9%);
     display: flex;
     flex-wrap: wrap;
     column-gap: 153px;
@@ -51,6 +54,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     justify-content: space-between;
     column-gap: 0;
     row-gap: 0;
@@ -71,23 +75,23 @@
 
 @media (min-width: $tablet-width) {
   .working-method__item:nth-child(1) {
-    background: url("../../img/icon-1-t.png") no-repeat
-      127px 40px;
+    background: url("../img/icon-1-t.png") no-repeat 127px
+      40px;
   }
 
   .working-method__item:nth-child(2) {
-    background: url("../../img/icon-2-t.png") no-repeat
-      127px 40px;
+    background: url("../img/icon-2-t.png") no-repeat 127px
+      40px;
   }
 
   .working-method__item:nth-child(3) {
-    background: url("../../img/icon-3-t.png") no-repeat
-      127px 40px;
+    background: url("../img/icon-3-t.png") no-repeat 127px
+      40px;
   }
 
   .working-method__item:nth-child(4) {
-    background: url("../../img/icon-4-t.png") no-repeat
-      127px 40px;
+    background: url("../img/icon-4-t.png") no-repeat 127px
+      40px;
   }
 }
 
