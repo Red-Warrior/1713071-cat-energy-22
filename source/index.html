@@ -176,27 +176,31 @@
 
           <div class="example__slider">
             <div class="example__image-wrapper">
-              <picture class="example__slide example__before">
-                <source media="(min-width: 768px)" srcset="../img/before.png" />
-                <img
-                  class="example__image example__image-before"
-                  src="../img/before-m.png"
-                  alt="кот до похудения"
-                  width="320"
-                  height="242"
-                />
-              </picture>
+              <div class="example__slide example__before">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/before.png" />
+                  <img
+                    class="example__image example__image-before"
+                    src="img/before-m.png"
+                    alt="кот до похудения"
+                    width="320"
+                    height="242"
+                  />
+                </picture>
+              </div>
 
-              <picture class="example__slide example__after">
-                <source media="(min-width: 768px)" srcset="../img/after.png" />
-                <img
-                  class="example__image example__image-after"
-                  src="../img/after-m.png"
-                  alt="кот после похудения"
-                  width="320"
-                  height="242"
-                />
-              </picture>
+              <div class="example__slide example__after">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/after.png" />
+                  <img
+                    class="example__image example__image-after"
+                    src="img/after-m.png"
+                    alt="кот после похудения"
+                    width="320"
+                    height="242"
+                  />
+                </picture>
+              </div>
             </div>
 
             <div class="example__control-block">
@@ -219,8 +223,8 @@
               Санкт-Петербург
             </p>
           </div>
-          <!--          <img class="location__map" src="img/location.jpg" alt="карта" />-->
           <iframe
+            class="location__map"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b943dea7135a9e03483dd01850bfb8ce17a377186de723f567ed089e55c0f67&amp;source=constructor"
             width="100%"
             height="362"
