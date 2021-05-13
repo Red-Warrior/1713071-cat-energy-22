@@ -1,6 +1,7 @@
 @import "../global/variables";
 
 .order {
+  display: block;
   padding: 10px 0;
   background-color: $brand-green;
   font-style: normal;
@@ -10,23 +11,42 @@
   text-transform: uppercase;
   text-align: center;
   vertical-align: center;
+  text-decoration: none;
+  color: #ffffff;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
     grid-column: 1/3;
     grid-row: 2/3;
   }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:focus {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
-.order__text {
-  text-decoration: none;
-  color: #ffffff;
+.order--optionally {
+  @media (min-width: $desktop-width) {
+    width: 244px;
+  }
 }
 
 .order--all {
   background-color: $blocks;
+
+  &:hover {
+    background: #ebebeb;
+  }
 }
 
 .order__text--all {
   color: #444444;
+
+  &:focus {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
