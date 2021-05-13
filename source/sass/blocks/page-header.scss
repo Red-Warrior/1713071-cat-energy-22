@@ -1,6 +1,8 @@
 @import "../global/variables";
 
-.page-header {
+//.page-header {}
+
+.page-header__block-wrapper {
   @media (min-width: $tablet-width) {
     @include side-padding(3.9%);
     padding-top: 25px;

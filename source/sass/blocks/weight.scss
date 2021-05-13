@@ -1,6 +1,8 @@
 @import "../global/variables";
 
-.weight {
+//.weight {}
+
+.weight__block_wrapper {
   @include side-padding;
   padding-top: 22px;
   padding-bottom: 27px;

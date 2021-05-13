@@ -65,7 +65,9 @@ window.addEventListener("resize", () => {
     sliderBlock.classList.add("listener");
     sliderBeforeButton.addEventListener("click", buttonBefore);
     sliderAfterButton.addEventListener("click", buttonAfter);
-    imgAfter.style.display = "none";
+    if (imgBefore.style.display === "block") {
+      imgAfter.style.display = "none";
+    }
   }
 });
 

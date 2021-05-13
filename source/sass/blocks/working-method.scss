@@ -1,6 +1,8 @@
 @import "../global/variables";
 
-.working-method {
+//.working-method {}
+
+.working-method__block-wrapper {
   @include side-padding;
   padding-bottom: 42px;
 
