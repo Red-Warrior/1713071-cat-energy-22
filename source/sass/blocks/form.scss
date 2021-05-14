@@ -6,7 +6,7 @@ fieldset {
   border: none;
 }
 
-.form {
+.form__block-wrapper {
   @include side-padding;
 
   @media (min-width: $tablet-width) {
@@ -243,7 +243,7 @@ input:not([type="checkbox"]):not([type="radio"]),
   }
 }
 
-.form__title::before {
+/*.form__title::before {
   content: "";
   width: 200vw;
   height: 2px;
@@ -260,7 +260,7 @@ input:not([type="checkbox"]):not([type="radio"]),
   @media (min-width: $desktop-width) {
     left: -1400px;
   }
-}
+}*/
 
 .form__title::after {
   margin-left: -25px;
