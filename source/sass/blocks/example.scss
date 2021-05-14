@@ -1,9 +1,20 @@
 @import "../global/variables";
 
 .example {
+  background-color: $blocks;
+
+  @media (min-width: $tablet-width) {
+    background-color: #eaeaea;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $blocks;
+  }
+}
+
+.example__block-wrapper {
   @include side-padding;
   padding-bottom: 25px;
-  background-color: $blocks;
   padding-top: 27px;
   position: relative;
 
@@ -11,7 +22,6 @@
     @include side-padding(3.9%);
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #eaeaea;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,7 +29,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: $blocks;
   }
 }
 
@@ -277,13 +286,13 @@
 
 .example__image {
   display: block;
-  width: 112%;
+  width: 115%;
   height: auto;
   position: relative;
   //position: absolute;
   top: 0;
   bottom: 0;
-  left: -16px;
+  left: -18px;
   right: 0;
 
   @media (min-width: $tablet-width) {

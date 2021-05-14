@@ -1,6 +1,10 @@
+@import "../global/variables";
+
 .container {
-  display: block;
   min-width: 320px;
-  max-width: 1440px;
-  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 }

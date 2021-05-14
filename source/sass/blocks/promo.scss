@@ -1,6 +1,8 @@
 @import "../global/variables";
 
-.promo {
+//.promo {}
+
+.promo__block-wrapper {
   color: #ffffff;
 
   @media (min-width: $tablet-width) {
