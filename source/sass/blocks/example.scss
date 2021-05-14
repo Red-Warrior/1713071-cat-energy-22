@@ -4,11 +4,11 @@
   background-color: $blocks;
 
   @media (min-width: $tablet-width) {
-    background-color: #eaeaea;
+    background-image: linear-gradient($base-background 58%, #eaeaea 58%);
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $blocks;
+    background-image: linear-gradient($base-background 30%, $blocks 30%);
   }
 }
 
@@ -29,27 +29,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-  }
-}
-
-.example::before {
-  content: "";
-  width: 100%;
-  height: 633px;
-  display: none;
-  background-color: $base-background;
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 190px;
   }
 }
 
