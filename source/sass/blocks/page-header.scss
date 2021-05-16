@@ -1,11 +1,9 @@
 @import "../global/variables";
 
-//.page-header {}
-
 .page-header__block-wrapper {
   @media (min-width: $tablet-width) {
     @include side-padding(3.9%);
-    padding-top: 25px;
+    padding-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,14 +16,15 @@
 }
 
 .page-header__wrapper {
-  padding-top: 11px;
-  padding-bottom: 17px;
+  padding-top: 12px;
+  padding-bottom: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: $tablet-width) {
+    display: block;
     padding: 0;
     justify-content: flex-start;
     align-items: center;
@@ -33,21 +32,10 @@
   }
 }
 
-.page-header__logo-image {
-  padding-left: 21px;
-  float: left;
-  align-items: center;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .page-header__wrapper a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 2;
 
   &:hover {
     opacity: 0.8;
@@ -66,36 +54,32 @@
   }
 }
 
-.page-header__logo-image-2 {
-  display: none;
+.page-header__logo {
+  padding-left: 20px;
+  padding-right: 10px;
+  float: left;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 70px;
-    height: 60px;
+    padding: 0;
   }
 }
 
 .page-header__logo-title {
-  @media (min-width: $tablet-width) {
-    padding: 0 0 0 13px;
-  }
+  align-self: flex-end;
+  padding-bottom: 7px;
 
-  @media (min-width: $desktop-width) {
-    padding-left: 14px;
-    width: 118px;
-    height: 21px;
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
 .page-header__toggle {
+  margin-right: 21px;
+  padding: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 21px 0 0;
   width: 45px;
   height: auto;
   border: none;
@@ -105,10 +89,6 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
-
-.page-header__toggle-center {
-  flex-grow: 2;
 }
 
 .page-header__image {

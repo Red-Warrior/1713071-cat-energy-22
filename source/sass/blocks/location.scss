@@ -22,9 +22,12 @@
 
   @media (min-width: $desktop-width) {
     margin: auto 0 auto 110px;
+    padding: 63px 0 0 0;
+    box-sizing: border-box;
     justify-content: center;
+    align-items: flex-start;
     width: 570px;
-    padding: 0;
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -52,7 +55,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 87px;
+    margin-right: 110px;
     padding: 0;
   }
 }
@@ -68,9 +71,14 @@
   color: #444444;
 
   @media (min-width: $tablet-width) {
+    text-align: right;
     max-width: 160px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
   }
 }
 
@@ -84,4 +92,8 @@
 
 .location__map {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }

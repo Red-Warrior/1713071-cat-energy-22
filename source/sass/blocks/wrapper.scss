@@ -1,4 +1,10 @@
 .wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.wrapper-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

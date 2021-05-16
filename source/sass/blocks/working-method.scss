@@ -1,10 +1,8 @@
 @import "../global/variables";
 
-//.working-method {}
-
 .working-method__block-wrapper {
   @include side-padding;
-  padding-bottom: 42px;
+  padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -51,7 +49,7 @@
     @include side-margin(3.9%);
     display: flex;
     flex-wrap: wrap;
-    column-gap: 153px;
+    column-gap: 133px;
     row-gap: 37px;
   }
 
@@ -122,5 +120,17 @@
     padding: 0;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.working-method__sep {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

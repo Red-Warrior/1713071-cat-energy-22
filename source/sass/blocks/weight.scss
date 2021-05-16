@@ -1,7 +1,5 @@
 @import "../global/variables";
 
-//.weight {}
-
 .weight__block_wrapper {
   @include side-padding;
   padding-top: 22px;
@@ -23,7 +21,7 @@
 
 .weight__wrapper {
   background-color: $blocks;
-  padding: 20px 33px 18px 20px;
+  padding: 21px 20px 18px 20px;
 
   @media (min-width: $tablet-width) {
     padding: 0 280px 1px 52px;
@@ -201,7 +199,7 @@
 .weight__catalog {
   margin-top: 15px;
   display: block;
-  width: 132px;
+  width: 170px;
   height: 24px;
   text-decoration: none;
 
@@ -227,11 +225,6 @@
     margin-bottom: 55px;
     width: 182px;
   }
-}
-
-.weight__arrow-icon {
-  width: 24px;
-  height: 12px;
 }
 
 .weight__desc {

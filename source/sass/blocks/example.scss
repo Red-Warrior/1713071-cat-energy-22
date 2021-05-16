@@ -1,7 +1,7 @@
 @import "../global/variables";
 
 .example {
-  background-color: $blocks;
+  background-color: $blocks-second;
 
   @media (min-width: $tablet-width) {
     background-image: linear-gradient($base-background 58%, #eaeaea 58%);
@@ -56,7 +56,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 58px;
+    padding-top: 70px;
   }
 }
 
@@ -70,6 +70,7 @@
   color: #444444;
 
   @media (min-width: $tablet-width) {
+    width: 97%;
     font-size: 16px;
     line-height: 24px;
     margin: 63px 0 54px 0;
@@ -132,8 +133,8 @@
 }
 
 .example__text-top {
-  margin-top: 15px;
-  margin-bottom: 18px;
+  margin-top: 14px;
+  margin-bottom: 17px;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -147,19 +148,22 @@
 }
 
 .example__text-bottom {
-  margin: 0 auto -10px auto;
+  margin: 0 auto -20px auto;
+  padding: 0 12px;
   width: 50%;
+  font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 12px;
   color: #444444;
-  background-color: $blocks;
+  background-color: $blocks-second;
   z-index: 2;
   position: relative;
   top: -9px;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     width: 70%;
     font-size: 14px;
     line-height: 14px;
@@ -169,6 +173,11 @@
   @media (min-width: $desktop-width) {
     background-color: $blocks;
   }
+}
+
+.example__info-wrapper:last-child .example__text-bottom {
+  padding: 0 5px;
+  width: 80%;
 }
 
 .example__total {
@@ -190,25 +199,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 55px;
-  }
-}
-
-.example__total br {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: none;
+    margin-top: 65px;
   }
 }
 
 .example__total span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     margin-left: 60px;
+    display: inline;
   }
 }
 
@@ -222,7 +226,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    padding-top: 25px;
+    padding-top: 43px;
     width: 708px;
     height: 620px;
   }
@@ -314,7 +318,7 @@
 //--------------------
 
 .example__control-block {
-  margin: 13px 25px 0 25px;
+  margin: 0 25px 0 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -327,7 +331,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 13px 0 0 0;
+    margin: 43px 0 0 0;
     display: flex;
     justify-content: flex-end;
   }
