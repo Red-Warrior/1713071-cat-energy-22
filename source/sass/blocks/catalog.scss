@@ -1,6 +1,6 @@
 @import "../global/variables";
 
-.catalog {
+.catalog__blog-wrapper {
   @media (min-width: $tablet-width) {
     @include side-padding(3.9%);
     display: grid;
@@ -53,8 +53,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     height: 512px;
-    background: url("../img/catalog-card-bg.png") repeat-x
-      bottom;
+    background-image: linear-gradient($base-background 16%, $blocks 16%);
   }
 
   @media (min-width: $desktop-width) {
@@ -103,10 +102,6 @@
   @include side-padding;
 
   @media (min-width: $tablet-width) {
-    @include side-padding(38px);
-  }
-
-  @media (min-width: $desktop-width) {
     @include side-padding(38px);
   }
 }
@@ -231,6 +226,7 @@
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
+    @include side-padding(0);
     padding-top: 83px;
     padding-bottom: 0;
     border: none;
@@ -238,10 +234,12 @@
 }
 
 .catalog__info-wrapper {
+  @include side-padding;
   text-align: center;
   vertical-align: center;
 
   @media (min-width: $tablet-width) {
+    @include side-padding(38px);
     padding-bottom: 38px;
     border: 1px solid #ebebeb;
   }
