@@ -1,6 +1,7 @@
 // Colors
 $base-background: #ffffff;
 $blocks: #f2f2f2;
+$blocks-second: #eaeaea;
 $brand-green: #68b738;
 
 // Viewports
@@ -8,12 +9,12 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 
 // Mixins
-@mixin side-padding($value: 6.5%) {
+@mixin side-padding($value: 6%) {
   padding-left: $value;
   padding-right: $value;
 }
 
-@mixin side-margin($value: 6.5%) {
+@mixin side-margin($value: 6%) {
   margin-left: $value;
   margin-right: $value;
 }
