@@ -206,6 +206,7 @@
   &:hover {
     .weight__arrow-icon {
       width: 32px;
+      height: auto;
       transition: width 0.2s ease-in-out;
     }
   }

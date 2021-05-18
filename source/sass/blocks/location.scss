@@ -51,7 +51,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 22px;
+    line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {
@@ -96,4 +96,22 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
+}
+
+.location__static-map {
+  display: none;
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.location__static-map--no-js {
+  display: block;
+}
+
+.location__map--no-js {
+  display: none;
 }
