@@ -8,12 +8,13 @@
 
   @media (min-width: $tablet-width) {
     @include side-padding(3.9%);
-    padding-top: 0;
+    padding-top: 55px;
     padding-bottom: 0;
+    box-sizing: border-box;
     height: 150px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,7 +28,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 0;
   }
 
@@ -55,8 +56,10 @@
   @media (min-width: $tablet-width) {
     margin: 0 0 0 20px;
     justify-content: space-between;
+    align-items: center;
     border: none;
-    width: 126px;
+    width: 130px;
+    height: auto;
   }
 }
 

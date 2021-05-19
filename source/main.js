@@ -1,5 +1,8 @@
 document.querySelectorAll(".catalog__item-heading").forEach((item) => (item.tabIndex = "-1"));
 
+document.querySelector(".location__static-map--no-js").classList.remove("location__static-map--no-js");
+document.querySelector(".location__map--no-js").classList.remove("location__map--no-js");
+
 let menuMain = document.querySelector(".main-nav");
 let menuButton = document.querySelector(".page-header__toggle");
 let menuImage = document.querySelector(".page-header__image");
