@@ -188,7 +188,7 @@
   opacity: 0.3;
 }
 
-input:not([type="checkbox"]):not([type="radio"]) {
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]) {
   padding-left: 14px;
 
   @media (min-width: $tablet-width) {
@@ -196,7 +196,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
   }
 }
 
-input:not([type="checkbox"]):not([type="radio"]),
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 .form-comment textarea {
   border: none;
   outline: 1px solid #e7e7e7;

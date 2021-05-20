@@ -38,6 +38,10 @@
   background-color: $blocks;
 }
 
+.location__info--no-js {
+  display: none;
+}
+
 .location__text-cooperation {
   margin: 0;
   padding-right: 5px;
@@ -100,11 +104,22 @@
 
 .location__static-map {
   display: none;
-  width: 100%;
   height: 362px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
+    text-align: center;
     height: 400px;
+    background-color: $blocks;
+  }
+}
+
+.location__image {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
   }
 }
 

@@ -51,7 +51,7 @@
       </div>
     </header>
 
-    <main class="page">
+    <main class="page index__page">
       <section class="promo">
         <div class="container">
           <div class="promo__block-wrapper">
@@ -228,33 +228,37 @@
             </div>
 
             <div class="example__slider">
-              <div class="example__image-wrapper">
+              <div class="example__slide-wrapper">
                 <div class="example__slide example__before">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="img/before.png 1x, img/before@2x.png 2x" />
-                    <img
-                      class="example__image example__image-before"
-                      src="img/before-m.png"
-                      srcset="img/before-m@2x.png 2x"
-                      alt="кот до похудения"
-                      width="320"
-                      height="248"
-                    />
-                  </picture>
+                  <div class="example__image-wrapper example__image-wrapper--before">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/before.png 1x, img/before@2x.png 2x" />
+                      <img
+                        class="example__image example__image-before"
+                        src="img/before-m.png"
+                        srcset="img/before-m@2x.png 2x"
+                        alt="кот до похудения"
+                        width="320"
+                        height="248"
+                      />
+                    </picture>
+                  </div>
                 </div>
 
                 <div class="example__slide example__after">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="img/after.png 1x, img/after@2x.png 2x" />
-                    <img
-                      class="example__image example__image-after"
-                      src="img/after-m.png"
-                      srcset="img/after-m@2x.png 2x"
-                      alt="кот после похудения"
-                      width="320"
-                      height="248"
-                    />
-                  </picture>
+                  <div class="example__image-wrapper example__image-wrapper--after">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="img/after.png 1x, img/after@2x.png 2x" />
+                      <img
+                        class="example__image example__image-after"
+                        src="img/after-m.png"
+                        srcset="img/after-m@2x.png 2x"
+                        alt="кот после похудения"
+                        width="320"
+                        height="248"
+                      />
+                    </picture>
+                  </div>
                 </div>
               </div>
 
@@ -264,6 +268,7 @@
                   <div class="example__control"></div>
                   <div class="example__toggle"></div>
                 </div>
+
                 <button class="example__button example__button-after" type="button"><span>стало</span></button>
               </div>
             </div>
@@ -273,24 +278,20 @@
 
       <section class="location">
         <h2 class="visually-hidden">Местоположения фирмы</h2>
-        <div class="location__info">
+        <div class="location__info location__info--no-js">
           <p class="location__text-cooperation">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="location__text">
             ул. Большая Конюшенная, д. 19/8<br class="location_indent" /><br class="location_indent" />
             Санкт-Петербург
           </p>
         </div>
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/map-d.jpg" />
-          <source media="(min-width: 768px)" srcset="img/map-t.jpg" />
-          <img
-            src="img/map-m.jpg"
-            class="location__static-map location__static-map--no-js"
-            width="320"
-            height="362"
-            alt="Местоположение фирмы"
-          />
-        </picture>
+        <div class="location__static-map location__static-map--no-js">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-d.jpg" />
+            <source media="(min-width: 768px)" srcset="img/map-t.jpg" />
+            <img class="location__image" src="img/map-m.jpg" width="320" height="362" alt="Местоположение фирмы" />
+          </picture>
+        </div>
         <iframe
           class="location__map location__map--no-js"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b943dea7135a9e03483dd01850bfb8ce17a377186de723f567ed089e55c0f67&amp;source=constructor"
