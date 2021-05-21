@@ -2,9 +2,11 @@
 
 .optionally {
   @include side-padding;
+  padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     @include side-padding(3.9%);
+    padding-bottom: 76px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,10 +26,9 @@
 
 .optionally__heading {
   margin: 0;
-  padding: 25px 0 36px 0;
+  padding: 25px 0 34px 0;
   position: relative;
   text-align: left;
-  vertical-align: center;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -47,8 +48,8 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
-    margin-top: 76px;
-    margin-bottom: 81px;
+    margin-top: 70px;
+    margin-bottom: 78px;
     width: 100%;
   }
 }
@@ -105,11 +106,11 @@
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
-    padding: 16px 38px 28px 38px;
+    padding: 16px 38px 25px 38px;
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
     border: 1px solid #cdcdcd;
-    row-gap: 20px;
+    row-gap: 16px;
   }
 
   @media (min-width: $desktop-width) {
@@ -199,6 +200,10 @@
   padding-top: 39px;
   height: auto;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 69px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-left: 79px;
     padding-top: 0;
@@ -206,6 +211,7 @@
 }
 
 .optionally__gift img {
+  display: block;
   width: 100%;
   height: auto;
 
