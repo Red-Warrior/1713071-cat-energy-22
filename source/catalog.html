@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/favicons/apple.png" />
@@ -28,8 +28,7 @@
               <svg class="page-header__logo-title" width="108" height="18" focusable="false">
                 <use xlink:href="img/sprite.svg#logo-title"></use>
               </svg>
-              <button class="page-header__toggle page-header--hidden" type="button">
-                <span class="visually-hidden">Открыть меню</span>
+              <button class="page-header__toggle page-header--hidden" type="button" aria-label="Открыть меню">
                 <span class="page-header__image"></span>
               </button>
             </div>
@@ -65,6 +64,12 @@
                     <a class="catalog__image-wrapper" href="">
                       <div class="catalog__image">
                         <picture>
+                          <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-1-t.webp 1x, img/catalog-1-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-1-m.webp 1x, img/catalog-1-m@2x.webp 2x" />
                           <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-1-t.png 1x, img/catalog-1-t@2x.png 2x"
@@ -108,6 +113,12 @@
                       <div class="catalog__image">
                         <picture>
                           <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-2-t.webp 1x, img/catalog-2-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-2-m.webp 1x, img/catalog-2-m@2x.webp 2x" />
+                          <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-2-t.png 1x, img/catalog-2-t@2x.png 2x"
                           />
@@ -149,6 +160,12 @@
                     <a class="catalog__image-wrapper" href="">
                       <div class="catalog__image">
                         <picture>
+                          <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-3-t.webp 1x, img/catalog-3-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-3-m.webp 1x, img/catalog-3-m@2x.webp 2x" />
                           <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-3-t.png 1x, img/catalog-3-t@2x.png 2x"
@@ -192,6 +209,12 @@
                       <div class="catalog__image">
                         <picture>
                           <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-4-t.webp 1x, img/catalog-4-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-4-m.webp 1x, img/catalog-4-m@2x.webp 2x" />
+                          <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-4-t.png 1x, img/catalog-4-t@2x.png 2x"
                           />
@@ -233,6 +256,12 @@
                     <a class="catalog__image-wrapper" href="">
                       <div class="catalog__image">
                         <picture>
+                          <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-5-t.webp 1x, img/catalog-5-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-5-m.webp 1x, img/catalog-5-m@2x.webp 2x" />
                           <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-5-t.png 1x, img/catalog-5-t@2x.png 2x"
@@ -276,6 +305,12 @@
                       <div class="catalog__image">
                         <picture>
                           <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-6-t.webp 1x, img/catalog-6-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-6-m.webp 1x, img/catalog-6-m@2x.webp 2x" />
+                          <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-6-t.png 1x, img/catalog-6-t@2x.png 2x"
                           />
@@ -317,6 +352,12 @@
                     <a class="catalog__image-wrapper" href="">
                       <div class="catalog__image">
                         <picture>
+                          <source
+                            type="image/webp"
+                            media="(min-width: 768px)"
+                            srcset="img/catalog-7-t.webp 1x, img/catalog-7-t@2x.webp 2x"
+                          />
+                          <source type="image/webp" srcset="img/catalog-7-m.webp 1x, img/catalog-7-m@2x.webp 2x" />
                           <source
                             media="(min-width: 768px)"
                             srcset="img/catalog-7-t.png 1x, img/catalog-7-t@2x.png 2x"
@@ -409,9 +450,20 @@
 
             <div class="optionally__gift">
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="img/gift-d.webp 1x, img/gift-d@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/gift-t.webp 1x, img/gift-t@2x.webp 2x"
+                />
+                <source type="image/webp" srcset="img/gift-m.webp 1x, img/gift-m@2x.webp 2x" />
                 <source media="(min-width: 1440px)" srcset="img/gift-d.jpg 1x, img/gift-d@2x.jpg 2x" />
                 <source media="(min-width: 768px)" srcset="img/gift-t.jpg 1x, img/gift-t@2x.jpg 2x" />
-                <img src="img/gift-m.jpg" srcset="img/gift-m@2x.jpg 2x" alt="подарок" width="280" height="289" />
+                <img src="img/gift-m.jpg" srcset="img/gift-m@2x.jpg 2x" alt="подарок при заказе" width="280" height="289" />
               </picture>
             </div>
           </div>
@@ -419,30 +471,30 @@
 
         <section class="location">
           <h2 class="visually-hidden">Местоположения фирмы</h2>
-          <div class="location__info">
+          <div class="location__info location__info--color location__info--no-js">
             <p class="location__text-cooperation">приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <p class="location__text">
               ул. Большая Конюшенная, д. 19/8<br class="location_indent" /><br class="location_indent" />
               Санкт-Петербург
             </p>
           </div>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/map-d.jpg" />
-            <source media="(min-width: 768px)" srcset="img/map-t.jpg" />
-            <img
-              src="img/map-m.jpg"
-              class="location__static-map location__static-map--no-js"
-              width="320"
-              height="362"
-              alt="Местоположение фирмы"
-            />
-          </picture>
+          <div class="location__static-map location__static-map--no-js">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-d.webp" />
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-t.webp" />
+              <source type="image/webp" srcset="img/map-m.webp" />
+              <source media="(min-width: 1440px)" srcset="img/map-d.jpg" />
+              <source media="(min-width: 768px)" srcset="img/map-t.jpg" />
+              <img class="location__image" src="img/map-m.jpg" width="320" height="362" alt="Местоположение фирмы" />
+            </picture>
+          </div>
           <iframe
             class="location__map location__map--no-js"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b943dea7135a9e03483dd01850bfb8ce17a377186de723f567ed089e55c0f67&amp;source=constructor"
             width="100%"
             height="362"
             frameborder="0"
+            aria-label="интерактивная карта"
           ></iframe>
         </section>
       </main>
@@ -488,6 +540,6 @@
         </div>
       </footer>
     </div>
-    <script src="main.js"></script>
+    <script src="main.min.js"></script>
   </body>
 </html>
