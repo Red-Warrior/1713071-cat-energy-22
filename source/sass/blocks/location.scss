@@ -36,6 +36,10 @@
 
 .location__info--color {
   background-color: $blocks;
+
+  @media (min-width: $desktop-width) {
+    background-color: $blocks-second;
+  }
 }
 
 .location__info--no-js {
