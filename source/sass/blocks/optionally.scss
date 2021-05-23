@@ -11,7 +11,7 @@
 
   @media (min-width: $desktop-width) {
     @include side-padding(7.64%);
-    padding-bottom: 86px;
+    padding-bottom: 82px;
   }
 }
 
@@ -39,7 +39,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     margin-left: 37px;
-    margin-top: 68px;
+    margin-top: 65px;
     margin-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
@@ -102,7 +102,7 @@
 }
 
 .optionally__item {
-  padding-bottom: 19px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {

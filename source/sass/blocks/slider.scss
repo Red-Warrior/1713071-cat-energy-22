@@ -1,0 +1,271 @@
+@import "../global/variables";
+
+.slider {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    width: 708px;
+    height: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+    padding-top: 0;
+    margin: 0 0 0 auto;
+  }
+}
+
+.slider__wrapper {
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  height: 73vw;
+  //border: 1px solid black;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 620px;
+
+    @media (min-width: $desktop-width) {
+      top: 10px;
+      left: 65px;
+    }
+  }
+}
+
+.slider__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  //border: 1px solid red;
+}
+
+.slider__before {
+  right: 0%;
+
+  @media (min-width: $tablet-width) {
+    z-index: 1;
+    right: 50%;
+  }
+}
+
+.slider__after {
+  left: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    left: 50%;
+  }
+}
+
+.slider__image-wrapper {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    overflow: hidden;
+    width: 677px;
+    height: 520px;
+  }
+}
+
+.slider__image-wrapper--before {
+  @media (min-width: $tablet-width) {
+    left: 0;
+  }
+}
+
+.slider__image-wrapper--after {
+  @media (min-width: $tablet-width) {
+    right: 0;
+  }
+}
+
+.slider__image {
+  display: block;
+  width: 115%;
+  height: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: -18px;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 677px;
+    height: 520px;
+  }
+}
+
+.slider__image-before {
+  @media (min-width: $tablet-width) {
+    width: 677px;
+    left: -12px;
+  }
+}
+
+.slider__image-after {
+  width: 110%;
+
+  @media (min-width: $tablet-width) {
+    width: 545px;
+    left: 65px;
+  }
+}
+
+.slider__control-block {
+  margin: 20px 25px 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    bottom: 65px;
+    display: flex;
+    align-self: flex-end;
+  }
+}
+
+.slider__button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: transparent;
+  width: 70px;
+  height: 40px;
+
+  @media (min-width: $tablet-width) {
+    pointer-events: none;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.slider__button-before {
+  margin-right: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.slider__button-after {
+  margin-left: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.slider__control-wrapper {
+  position: relative;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+  }
+}
+
+.slider__control {
+  width: 100%;
+  height: 14px;
+  background-color: $base-background;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    background-color: #dcdcdc;
+    border: none;
+  }
+}
+
+.slider__toggle {
+  pointer-events: none;
+  margin: auto 6px auto 6px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 45%;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $brand-green;
+  cursor: grab;
+  touch-action: none;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    margin: auto 0 auto -17px;
+    pointer-events: auto;
+    left: 50%;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $base-background;
+    border: 1px solid #cdcdcd;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  &:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  &:active {
+    border: 1px solid $brand-green;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    cursor: grabbing;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider__toggle::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 13px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $brand-green;
+  }
+}
+
+.slider__button-text {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 1px dotted rgba(#000000, 0.24);
+  }
+}
