@@ -2,11 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
@@ -27,6 +26,8 @@
               <use xlink:href="img/sprite.svg#logo-title"></use>
             </svg>
             <button class="page-header__toggle page-header--hidden" type="button" aria-label="Открыть меню">
+              <!--            page-header&#45;&#45;hidden - скрывает мобильное меню-->
+              <!--            page-header&#45;&#45;menu-icon - переключает иконку-->
               <span class="page-header__image"></span>
             </button>
           </div>
@@ -243,10 +244,10 @@
               </div>
             </div>
 
-            <div class="example__slider">
-              <div class="example__slide-wrapper">
-                <div class="example__slide example__before">
-                  <div class="example__image-wrapper example__image-wrapper--before">
+            <div class="slider">
+              <div class="slider__wrapper">
+                <div class="slider__slide slider__before">
+                  <div class="slider__image-wrapper slider__image-wrapper--before">
                     <picture>
                       <source
                         type="image/webp"
@@ -256,7 +257,8 @@
                       <source type="image/webp" srcset="img/before-m.webp 1x, img/before-m@2x.webp 2x" />
                       <source media="(min-width: 768px)" srcset="img/before.png 1x, img/before-m@2x.png 2x" />
                       <img
-                        class="example__image example__image-before"
+                        example__image-before
+                        class="slider__image slider__image-before"
                         src="img/before-m.png"
                         srcset="img/before-m@2x.png 2x"
                         alt="кот до похудения"
@@ -267,8 +269,8 @@
                   </div>
                 </div>
 
-                <div class="example__slide example__after">
-                  <div class="example__image-wrapper example__image-wrapper--after">
+                <div class="slider__slide slider__after">
+                  <div class="slider__image-wrapper slider__image-wrapper--after">
                     <picture>
                       <source
                         type="image/webp"
@@ -279,7 +281,7 @@
 
                       <source media="(min-width: 768px)" srcset="img/after.png 1x, img/after@2x.png 2x" />
                       <img
-                        class="example__image example__image-after"
+                        class="slider__image slider__image-after"
                         src="img/after-m.png"
                         srcset="img/after-m@2x.png 2x"
                         alt="кот после похудения"
@@ -290,25 +292,26 @@
                   </div>
                 </div>
               </div>
-
-              <div class="example__control-block">
+              <div class="slider__control-block">
                 <button
-                  class="example__button example__button-before"
+                  class="slider__button slider__button-before"
                   type="button"
                   aria-label="кнопка - показать кота до похудения"
                 >
-                  <span>было</span>
+                  <span class="slider__button-text">было</span>
                 </button>
-                <div class="example__wrapper">
-                  <div class="example__control"></div>
-                  <div class="example__toggle" aria-label="кнопка изменения диапазона слайдера"></div>
+                <div class="slider__control-wrapper">
+                  <div class="slider__control"></div>
+                  <div class="slider__toggle">
+                    <span class="visually-hidden">кнопка изменения диапазона слайдера</span>
+                  </div>
                 </div>
                 <button
-                  class="example__button example__button-after"
+                  class="slider__button slider__button-after"
                   type="button"
                   aria-label="кнопка - показать кота после похудения"
                 >
-                  <span>стало</span>
+                  <span class="slider__button-text">стало</span>
                 </button>
               </div>
             </div>
@@ -321,8 +324,7 @@
         <div class="location__info location__info--no-js">
           <p class="location__text-cooperation">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="location__text">
-            ул. Большая Конюшенная, д. 19/8<br class="location_indent" /><br class="location_indent" />
-            Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <span class="location_desc">Санкт-Петербург</span>
           </p>
         </div>
         <div class="location__static-map location__static-map--no-js">
@@ -345,7 +347,6 @@
         ></iframe>
       </section>
     </main>
-
     <footer class="page-footer">
       <a class="page-footer__logo" href="" aria-label="Главная страница Cat Energy ">
         <svg width="128" height="24">
@@ -386,6 +387,6 @@
         </a>
       </div>
     </footer>
-    <script src="main.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -17,6 +17,7 @@
   @media (min-width: $desktop-width) {
     @include side-padding(7.64%);
     margin: 0;
+    padding-bottom: 5px;
     display: grid;
     grid-template: auto/ repeat(2, 1fr);
     column-gap: 80px;

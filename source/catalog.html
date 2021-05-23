@@ -2,11 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml" />
@@ -29,6 +28,8 @@
                 <use xlink:href="img/sprite.svg#logo-title"></use>
               </svg>
               <button class="page-header__toggle page-header--hidden" type="button" aria-label="Открыть меню">
+                <!--            page-header&#45;&#45;hidden - скрывает мобильное меню-->
+                <!--            page-header&#45;&#45;menu-icon - переключает иконку-->
                 <span class="page-header__image"></span>
               </button>
             </div>
@@ -408,7 +409,6 @@
 
         <section class="optionally">
           <h2 class="optionally__heading">Дополнительные товары</h2>
-
           <div class="optionally__block-wrapper">
             <div class="optionally__item-wrapper">
               <div class="optionally__item">
@@ -463,7 +463,13 @@
                 <source type="image/webp" srcset="img/gift-m.webp 1x, img/gift-m@2x.webp 2x" />
                 <source media="(min-width: 1440px)" srcset="img/gift-d.jpg 1x, img/gift-d@2x.jpg 2x" />
                 <source media="(min-width: 768px)" srcset="img/gift-t.jpg 1x, img/gift-t@2x.jpg 2x" />
-                <img src="img/gift-m.jpg" srcset="img/gift-m@2x.jpg 2x" alt="подарок при заказе" width="280" height="289" />
+                <img
+                  src="img/gift-m.jpg"
+                  srcset="img/gift-m@2x.jpg 2x"
+                  alt="подарок при заказе"
+                  width="280"
+                  height="289"
+                />
               </picture>
             </div>
           </div>
@@ -474,8 +480,7 @@
           <div class="location__info location__info--color location__info--no-js">
             <p class="location__text-cooperation">приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <p class="location__text">
-              ул. Большая Конюшенная, д. 19/8<br class="location_indent" /><br class="location_indent" />
-              Санкт-Петербург
+              ул. Большая Конюшенная, д. 19/8 <span class="location_desc">Санкт-Петербург</span>
             </p>
           </div>
           <div class="location__static-map location__static-map--no-js">
@@ -498,7 +503,6 @@
           ></iframe>
         </section>
       </main>
-
       <footer class="page-footer">
         <a class="page-footer__logo" href="" aria-label="Главная страница Cat Energy ">
           <svg width="128" height="24">
@@ -540,6 +544,6 @@
         </div>
       </footer>
     </div>
-    <script src="main.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

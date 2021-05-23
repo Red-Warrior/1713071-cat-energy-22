@@ -16,6 +16,7 @@
   background-color: $base-background;
 
   @media (min-width: $tablet-width) {
+    align-items: flex-start;
     height: 200px;
     padding: 0 72px;
   }
@@ -25,7 +26,6 @@
     padding: 63px 0 0 0;
     box-sizing: border-box;
     justify-content: center;
-    align-items: flex-start;
     width: 570px;
 
     position: absolute;
@@ -58,13 +58,15 @@
   color: #111111;
 
   @media (min-width: $tablet-width) {
+    margin-top: 66px;
+    padding: 0;
     font-size: 20px;
     line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     margin-right: 110px;
-    padding: 0;
   }
 }
 
@@ -79,21 +81,23 @@
   color: #444444;
 
   @media (min-width: $tablet-width) {
+    margin-top: 66px;
     text-align: right;
     max-width: 160px;
+    height: 80px;
     font-size: 16px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     text-align: left;
   }
 }
 
-.location_indent {
-  display: none;
-
+.location_desc {
   @media (min-width: $tablet-width) {
+    margin-top: 20px;
     display: block;
   }
 }

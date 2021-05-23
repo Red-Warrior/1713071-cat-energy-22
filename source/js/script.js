@@ -4,10 +4,12 @@ function showMenu() {
 }
 
 function calculateHeight() {
-  let winWidth = document.documentElement.clientWidth;
-  let imageHeight = winWidth >= 768 ? 620 : (winWidth * 73) / 100;
-  let imageCustom = document.querySelector(".example__slide-wrapper");
-  imageCustom.style.height = imageHeight + "px";
+  if (document.querySelector(".slider__wrapper")) {
+    let winWidth = document.documentElement.clientWidth;
+    let imageHeight = winWidth >= 768 ? 620 : (winWidth * 73) / 100;
+    let imageCustom = document.querySelector(".slider__wrapper");
+    imageCustom.style.height = imageHeight + "px";
+  }
 }
 
 function resolutionSettings() {
@@ -16,37 +18,37 @@ function resolutionSettings() {
   function imagesClipping() {
     imgBefore.style.right = "50%";
     imgAfter.style.left = "50%";
-    toggle.style.left = "50%";
+    sliderToggle.style.left = "50%";
   }
 
   if (document.documentElement.clientWidth < 768) {
-    sliderBlock.classList.add("mobile");
+    slider.classList.add("slider--mobile");
 
-    if (sliderBlock.classList.contains("tablet") && sliderBlock.classList.contains("mobile")) {
-      sliderBlock.classList.remove("tablet");
+    if (slider.classList.contains("slider--tablet") && slider.classList.contains("slider--mobile")) {
+      slider.classList.remove("slider--tablet");
       imgBefore.style.right = "0";
       imgAfter.style.left = "100%";
-      toggle.style.left = "0";
-      toggle.style.right = "auto";
+      sliderToggle.style.left = "0";
+      sliderToggle.style.right = "auto";
     }
   }
 
   if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1440) {
-    sliderBlock.classList.add("tablet");
+    slider.classList.add("slider--tablet");
 
-    if (sliderBlock.classList.contains("tablet") && sliderBlock.classList.contains("mobile")) {
-      sliderBlock.classList.remove("mobile");
+    if (slider.classList.contains("slider--tablet") && slider.classList.contains("slider--mobile")) {
+      slider.classList.remove("slider--mobile");
       imagesClipping();
-    } else if (sliderBlock.classList.contains("tablet") && sliderBlock.classList.contains("desktop")) {
-      sliderBlock.classList.remove("desktop");
+    } else if (slider.classList.contains("slider--tablet") && slider.classList.contains("slider--desktop")) {
+      slider.classList.remove("slider--desktop");
       imagesClipping();
     }
   }
   if (document.documentElement.clientWidth >= 1440) {
-    sliderBlock.classList.add("desktop");
+    slider.classList.add("slider--desktop");
 
-    if (sliderBlock.classList.contains("tablet") && sliderBlock.classList.contains("desktop")) {
-      sliderBlock.classList.remove("tablet");
+    if (slider.classList.contains("slider--tablet") && slider.classList.contains("slider--desktop")) {
+      slider.classList.remove("slider--tablet");
       imagesClipping();
     }
   }
@@ -55,20 +57,20 @@ function resolutionSettings() {
 function buttonBefore() {
   imgBefore.style.right = "0%";
   imgAfter.style.left = "100%";
-  toggle.style.left = "0";
-  toggle.style.right = "auto";
+  sliderToggle.style.left = "0";
+  sliderToggle.style.right = "auto";
 }
 
 function buttonAfter() {
   imgBefore.style.right = "100%";
   imgAfter.style.left = "0%";
-  toggle.style.left = "auto";
-  toggle.style.right = "0";
+  sliderToggle.style.left = "auto";
+  sliderToggle.style.right = "0";
 }
 
 function pointerdown(event) {
-  if (event.target.closest(".example__toggle")) {
-    slider.classList.add("slider_dragging");
+  if (event.target.closest(".slider__toggle")) {
+    sliderControl.classList.add("slider_dragging");
     document.body.style.userSelect = "none";
 
     let pointermove = (event) => {
@@ -77,18 +79,18 @@ function pointerdown(event) {
       sliderToggle.pointermove = () => false;
       sliderToggle.pointerdown = () => false;
 
-      let left = (event.clientX - slider.getBoundingClientRect().left) / slider.offsetWidth;
+      let left = (event.clientX - sliderControl.getBoundingClientRect().left) / sliderControl.offsetWidth;
       left < 0 ? (left = 0) : left > 1 ? (left = 1) : left;
 
       let leftPercent = Math.round(left * 100);
       sliderToggle.style.left = `${leftPercent}%`;
 
-      imageBefore.style.right = 100 - leftPercent + "%";
-      imageAfter.style.left = 100 - (100 - leftPercent) + "%";
+      imgBefore.style.right = 100 - leftPercent + "%";
+      imgAfter.style.left = 100 - (100 - leftPercent) + "%";
     };
 
     let pointerup = () => {
-      slider.classList.remove("slider_dragging");
+      sliderControl.classList.remove("slider_dragging");
       document.body.style.userSelect = "auto";
 
       document.removeEventListener("pointermove", pointermove);
@@ -126,12 +128,9 @@ if (menuButton.classList.contains("page-header--hidden")) {
 menuButton.addEventListener("click", showMenu);
 
 //Slider buttons______________________________________________
-let sliderBlock = document.querySelector(".example__control-block");
-let sliderBeforeButton = document.querySelector(".example__button-before");
-let sliderAfterButton = document.querySelector(".example__button-after");
-let imgBefore = document.querySelector(".example__before");
-let imgAfter = document.querySelector(".example__after");
-let toggle = document.querySelector(".example__toggle");
+let slider = document.querySelector(".slider");
+let sliderBeforeButton = document.querySelector(".slider__button-before");
+let sliderAfterButton = document.querySelector(".slider__button-after");
 
 if (sliderBeforeButton && sliderAfterButton) {
   sliderBeforeButton.addEventListener("click", buttonBefore);
@@ -139,13 +138,12 @@ if (sliderBeforeButton && sliderAfterButton) {
 }
 
 //Slider, control (tablet, desktop)---------------------------
-let slider = document.querySelector(".example__wrapper");
-let sliderToggle = document.querySelector(".example__toggle");
+let sliderControl = document.querySelector(".slider__control-wrapper");
+let imgBefore = document.querySelector(".slider__before");
+let imgAfter = document.querySelector(".slider__after");
+let sliderToggle = document.querySelector(".slider__toggle");
 
 document.addEventListener("pointerdown", (event) => pointerdown(event));
-
-let imageBefore = document.querySelector(".example__before");
-let imageAfter = document.querySelector(".example__after");
 
 //Removing handlers___________________________________________
 window.onunload = () => {
