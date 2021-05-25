@@ -103,12 +103,12 @@ function pointerdown(event) {
 }
 
 //------------------------------------------------------------
-if (document.querySelector(".index__page")) {
+if (document.querySelector(".page--index")) {
   calculateHeight();
   window.addEventListener("resize", resolutionSettings);
 }
 
-//Replacing the map______________________________________________
+//Replacing the map___________________________________________
 document.querySelector(".location__info").classList.remove("location__info--no-js");
 document.querySelector(".location__static-map").classList.remove("location__static-map--no-js");
 document.querySelector(".location__map").classList.remove("location__map--no-js");
@@ -127,31 +127,28 @@ if (menuButton.classList.contains("page-header--hidden")) {
 }
 menuButton.addEventListener("click", showMenu);
 
-//Slider buttons______________________________________________
+//Slider______________________________________________________
 let slider = document.querySelector(".slider");
-let sliderBeforeButton = document.querySelector(".slider__button-before");
-let sliderAfterButton = document.querySelector(".slider__button-after");
-
-if (sliderBeforeButton && sliderAfterButton) {
-  sliderBeforeButton.addEventListener("click", buttonBefore);
-  sliderAfterButton.addEventListener("click", buttonAfter);
-}
-
-//Slider, control (tablet, desktop)---------------------------
 let sliderControl = document.querySelector(".slider__control-wrapper");
 let imgBefore = document.querySelector(".slider__before");
 let imgAfter = document.querySelector(".slider__after");
 let sliderToggle = document.querySelector(".slider__toggle");
+let sliderBeforeButton = document.querySelector(".slider__button-before");
+let sliderAfterButton = document.querySelector(".slider__button-after");
 
-document.addEventListener("pointerdown", (event) => pointerdown(event));
+if (document.querySelector(".page--index")) {
+  document.addEventListener("pointerdown", (event) => pointerdown(event));
+  sliderBeforeButton.addEventListener("click", buttonBefore);
+  sliderAfterButton.addEventListener("click", buttonAfter);
+}
 
 //Removing handlers___________________________________________
 window.onunload = () => {
-  menuButton.removeEventListener("click", showMenu);
-
-  if (document.querySelector(".index__page")) {
-    window.addEventListener("resize", resolutionSettings);
-    sliderBeforeButton.addEventListener("click", buttonBefore);
-    sliderAfterButton.addEventListener("click", buttonAfter);
+  if (document.querySelector(".page--index")) {
+    window.removeEventListener("resize", resolutionSettings);
+    document.removeEventListener("pointerdown", pointerdown);
+    menuButton.removeEventListener("click", showMenu);
+    sliderBeforeButton.removeEventListener("click", buttonBefore);
+    sliderAfterButton.removeEventListener("click", buttonAfter);
   }
 };

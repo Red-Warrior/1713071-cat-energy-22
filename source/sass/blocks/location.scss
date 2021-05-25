@@ -95,7 +95,7 @@
   }
 }
 
-.location_desc {
+.location__desc {
   @media (min-width: $tablet-width) {
     margin-top: 20px;
     display: block;
@@ -103,6 +103,8 @@
 }
 
 .location__map {
+  width: 100%;
+  border: none;
   display: block;
 
   @media (min-width: $tablet-width) {

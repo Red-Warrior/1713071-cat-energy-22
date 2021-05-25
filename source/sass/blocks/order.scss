@@ -35,16 +35,13 @@
   }
 }
 
-.order--all {
+.order--unique {
   background-color: $blocks;
+  color: #444444;
 
   &:hover {
     background: #ebebeb;
   }
-}
-
-.order__text--all {
-  color: #444444;
 
   &:focus {
     color: rgba(68, 68, 68, 0.3);
